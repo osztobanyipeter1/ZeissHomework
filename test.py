@@ -27,7 +27,6 @@ def parse(filename):
     if len(stacknames) != stackcount:
         raise ValueError("Wrong stack numbering")
     
-
     #Create stacks
     stacks = []
     for i in range(stackcount):
@@ -60,7 +59,7 @@ def v1 (stacks, moves):
         firstwarning = None
         if counter > 0 and len(stacks_v1[source]) < counter:
             if firstwarning is None:
-                print(f"WARNING: Movement #{i} Not enough crates in the asked stack to move {counter} items.")
+                print(f"WARNING: Movement #{i} Not enough box in the asked stack to move {counter} items.")
                 firstwarning = i
             continue
         for _ in range(counter):
